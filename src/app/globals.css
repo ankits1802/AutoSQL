@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  @apply antialiased;
+}
+
+@layer base {
+  :root {
+    /* Light theme inspired by the image */
+    --background: 0 0% 98%; /* Very light gray, almost white */
+    --foreground: 240 10% 3.9%; /* Dark grayish blue */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 221 83% 53%; /* Vibrant Blue from image's 'Query Editor' title */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 220 14.3% 95.9%; /* Light gray for secondary elements */
+    --secondary-foreground: 240 5.9% 10%; /* Dark text on secondary */
+
+    --muted: 220 14.3% 95.9%; /* Light gray - for sidebar active/hover bg */
+    --muted-foreground: 240 5% 64.9%; /* Lighter gray text */
+
+    --accent: 220 14.3% 95.9%; /* Similar to muted for general accents */
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%; /* Light gray border */
+    --input: 220 13% 91%; 
+    --ring: 221 83% 53%; /* Primary blue for rings */
+
+    --radius: 0.5rem; /* Default ShadCN 'lg' radius */
+
+    /* Custom Sidebar Theme (Light - inspired by image) */
+    --sidebar-background: 220 16% 96.5%; /* Very light gray, slightly off-white */
+    --sidebar-foreground: 240 10% 20%; /* Dark gray for sidebar text */
+    --sidebar-border: 220 13% 88%;
+    --sidebar-primary: var(--primary); /* Use main primary for icon accents if needed */
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: 220 15% 90%; /* Light gray for active/hover item background */
+    --sidebar-accent-foreground: var(--primary); /* Primary blue for text on active/hover */
+    --sidebar-ring: var(--ring);
+
+    /* Chart Colors (Adjust if needed based on new theme) */
+    --chart-1: 221 83% 53%; /* Primary Blue */
+    --chart-2: 160 70% 45%; /* Teal/Greenish */
+    --chart-3: 260 75% 60%; /* Purple */
+    --chart-4: 30 90% 55%;  /* Orange */
+    --chart-5: 120 60% 45%; /* Green */
+  }
+
+  .dark {
+    /* Dark theme adjustments - can be refined later if dark mode is a focus */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91.2% 59.8%; /* Brighter blue for dark mode */
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 217 91.2% 59.8%;
+
+    /* Sidebar Dark Theme */
+    --sidebar-background: 240 10% 6%; 
+    --sidebar-foreground: 0 0% 85%; 
+    --sidebar-border: 240 3.7% 12%;
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: 240 3.7% 18%; 
+    --sidebar-accent-foreground: var(--primary); 
+    --sidebar-ring: var(--ring);
+    
+    /* Chart Colors (Dark) */
+    --chart-1: 217 91.2% 59.8%;
+    --chart-2: 160 70% 50%;
+    --chart-3: 260 75% 65%;
+    --chart-4: 30 90% 60%;
+    --chart-5: 120 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  ::selection {
+    @apply bg-primary/70 text-primary-foreground;
+  }
+}
+
+/* Subtle transitions for common elements */
+@layer components {
+  .btn, .card, input, textarea, select {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  .card:hover {
+     /* Keeping subtle hover from before, can be adjusted if needed */
+    @apply shadow-xl border-primary/30;
+  }
+}
