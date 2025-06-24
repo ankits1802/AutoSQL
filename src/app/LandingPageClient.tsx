@@ -696,7 +696,7 @@ export default function LandingPageClient() {
       title: 'Transaction Evaluator',
       description: 'Analyze and validate transaction schedules, generate conflict graphs, check recoverability, and detect deadlocks in database systems.',
       icon: <TransactionIcon />,
-      href: 'https://6000-firebase-studio-1747597818093.cluster-6dx7corvpngoivimwvvljgokdw.cloudworkstations.dev/', // Updated href
+      href: 'https://transaction-flow-analyser.vercel.app/', // Updated href
       gradient: 'bg-gradient-to-br from-amber-500 to-yellow-600',
       glowColor: '#F59E0B'
     },
