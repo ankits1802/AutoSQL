@@ -687,7 +687,7 @@ export default function LandingPageClient() {
       title: 'Theory Engine: FD & RA Toolkit',
       description: 'Comprehensive toolkit for functional dependencies, relational algebra, decomposition checking, and natural language conversions.',
       icon: <TheoryEngineIcon />,
-      href: 'https://6000-firebase-studio-1747638835424.cluster-6dx7corvpngoivimwvvljgokdw.cloudworkstations.dev/', // Updated href
+      href: 'https://relationator.vercel.app/', // Updated href
       gradient: 'bg-gradient-to-br from-blue-500 to-sky-600',
       glowColor: '#3B82F6'
     },
