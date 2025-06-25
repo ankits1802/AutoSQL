@@ -678,7 +678,7 @@ export default function LandingPageClient() {
       title: 'ER and DFD Editor',
       description: 'Visually create and edit ER diagrams and DFDs with drag-and-drop functionality, automatic schema generation, and bidirectional sync.',
       icon: <ERDiagramIcon />,
-      href: 'https://6000-firebase-studio-1747741097708.cluster-sumfw3zmzzhzkx4mpvz3ogth4y.cloudworkstations.dev/', // Updated href
+      href: 'https://ankits1802-modelflow.vercel.app/', // Updated href
       gradient: 'bg-gradient-to-br from-emerald-500 to-green-600',
       glowColor: '#10B981'
     },
